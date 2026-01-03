@@ -1,0 +1,80 @@
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* prevent scrolling */
+    background: #111;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 360px;
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    margin: 15px auto;
+    background: #000;
+    border: 2px solid #0f0;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 26px;
+    font-size: 16px;
+    background: #0f0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0c0;
+}
+
+/* 📱 Mobile devices */
+@media (max-width: 480px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    canvas {
+        width: 260px;
+        height: 260px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 9px 22px;
+    }
+}
+
+/* 📱 Small height screens */
+@media (max-height: 500px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .game-container {
+        margin-top: 10px;
+    }
+}
